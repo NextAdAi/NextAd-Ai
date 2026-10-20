@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#080c18">
+<meta name="description" content="NextAd AI — إعلانات إبداعية بالذكاء الاصطناعي. شاهد أعمالنا واطلب إعلانك القادم.">
+<title>NextAd AI | إعلانات إبداعية بالذكاء الاصطناعي</title>
+<style>
+:root{--bg:#080c18;--panel:#101a2b;--panel2:#0c1423;--blue:#12b9ff;--orange:#ff9d16;--muted:#c5d2e5;--line:#293951}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:92px; -webkit-text-size-adjust:100%; text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:#fff;font-family:Arial,Tahoma,sans-serif;overflow-x:hidden}
+a{color:inherit}
+button,a{-webkit-tap-highlight-color:transparent}
+.site-header{position:sticky;top:0;z-index:20;background:rgba(8,12,24,.9);backdrop-filter:blur(16px);border-bottom:1px solid rgba(80,130,180,.18)}
+.nav{position:relative;max-width:1120px;width:92%;margin:auto;min-height:78px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;min-width:0}
+.brand img{width:112px;height:62px;object-fit:contain;border-radius:8px;flex:0 0 auto}
+.brand-slogan{display:block;max-width:155px;font-size:14px;font-weight:900;line-height:1.5;color:#e3efff;white-space:normal;text-wrap:balance}
+.nav-links{display:flex;align-items:center;gap:20px}
+.nav-links a{text-decoration:none;color:#d7e4f5;font-size:14px;transition:color .2s}
+.nav-links a:hover{color:var(--blue)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;text-decoration:none;padding:13px 20px;border-radius:11px;font-weight:800;border:1px solid transparent;transition:transform .2s,box-shadow .2s,filter .2s;cursor:pointer}
+.btn:hover{transform:translateY(-2px);box-shadow:0 9px 28px #12b9ff20;filter:brightness(1.06)}
+.btn-primary{background:linear-gradient(105deg,var(--blue),#60d7ff);color:#07111d}
+.btn-outline{border-color:#ff9d1680;color:#ffbd60;background:#ff9d1608}
+.btn-packages{background:linear-gradient(110deg,#ff9d16,#ffd36b);color:#1b1305}
+.mobile-wa{display:none;text-decoration:none;align-items:center;justify-content:center;white-space:nowrap;padding:10px 12px;border-radius:11px;border:1px solid #20c765;background:#20c765;color:#052312;font-weight:900;font-size:13px}
+.hero{position:relative;isolation:isolate;overflow:hidden;text-align:center;padding:64px 16px 44px;background:radial-gradient(ellipse at 50% 0%,#15517a 0%,#0c1b30 36%,var(--bg) 75%)}
+.hero:before,.hero:after{content:"";position:absolute;width:280px;height:280px;border-radius:50%;filter:blur(80px);opacity:.19;z-index:-1;animation:float 9s ease-in-out infinite alternate}
+.hero:before{background:var(--blue);top:10%;left:-100px}.hero:after{display:none}
+.hero-logo{width:min(360px,70vw);height:auto;max-height:190px;object-fit:contain;filter:drop-shadow(0 15px 35px #12b9ff20);animation:logoIn .8s ease both}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;margin:18px auto 0;padding:8px 13px;border:1px solid #12b9ff50;border-radius:99px;background:#0b2035;color:#a9e8ff;font-size:12px;letter-spacing:1.5px;direction:ltr}
+.eyebrow:before{content:"";width:7px;height:7px;background:var(--orange);border-radius:50%;box-shadow:0 0 12px var(--orange)}
+h1{font-size:clamp(30px,5.6vw,56px);line-height:1.25;margin:22px auto 12px;max-width:850px;letter-spacing:-1px}
+.gradient-text{background:linear-gradient(100deg,#fff 5%,var(--blue) 48%,#ffc05c 95%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p{max-width:680px;margin:0 auto;color:var(--muted);font-size:17px;line-height:1.9}
+.hero-actions{display:flex;justify-content:center;flex-wrap:wrap;gap:10px;margin-top:26px}
+.stats{display:flex;justify-content:center;gap:9px;flex-wrap:wrap;margin:22px auto 0;max-width:900px}
+.stat{display:inline-flex;align-items:center;gap:7px;border:1px solid #30445e;background:linear-gradient(145deg,#101f33d9,#0b1423e8);padding:10px 13px;border-radius:12px;color:#dce9f8;font-size:12px;line-height:1.5;box-shadow:inset 0 1px 0 #ffffff08;max-width:100%}
+.stat b{color:#fff;font-weight:700}.stat-icon{color:var(--orange);font-size:16px;text-shadow:0 0 12px #ff9d1640;flex:0 0 auto}
+.wrap{max-width:1120px;width:92%;margin:auto}
+section{padding:52px 0;scroll-margin-top:85px}
+.section-head{display:flex;justify-content:space-between;align-items:end;gap:18px;margin-bottom:25px}
+.kicker{color:var(--orange);font-size:12px;letter-spacing:2px;direction:ltr}
+h2{font-size:clamp(25px,4vw,35px);margin:8px 0}
+.section-head p{margin:0;color:var(--muted);line-height:1.8;max-width:620px}
+.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.card{background:linear-gradient(155deg,#121e31,#0c1422);border:1px solid var(--line);border-radius:17px;overflow:hidden;transition:transform .25s,border-color .25s,box-shadow .25s;min-width:0}
+.card:hover{transform:translateY(-4px);border-color:#12b9ff80;box-shadow:0 16px 42px #0005}
+.video-box{aspect-ratio:16/10;position:relative;display:grid;place-items:center;overflow:hidden;background:radial-gradient(circle at 30% 20%,#15527b,#111a2b 52%,#422b16)}
+.video-box:before{content:"";position:absolute;inset:0;background:linear-gradient(135deg,#12b9ff15,transparent 45%,#ff9d161a);transition:transform .6s}
+.card:hover .video-box:before{transform:scale(1.05)}
+.play{position:relative;width:62px;height:62px;border:1px solid #ffffff70;border-radius:50%;display:grid;place-items:center;background:linear-gradient(130deg,#12b9ff,#ff9d16);color:#07111d;font-size:24px;padding-right:2px;box-shadow:0 0 0 9px #ffffff0b,0 0 28px #12b9ff55;transition:transform .25s}
+.card:hover .play{transform:scale(1.08)}
+.video-box video,.video-box iframe{position:absolute;inset:0;width:100%;height:100%;border:0;object-fit:cover}
+.video-box iframe{display:none}.card.is-playing .video-box iframe{display:block}.card.is-playing .play{display:none}
+.details{padding:17px}.details h3{margin:0;font-size:18px}.details p{font-size:14px;color:var(--muted);line-height:1.7;margin:9px 0 0}.card-note{display:inline-block;margin-top:12px;color:#ffbd60;font-size:12px}
+
+/* Services: uniform tiles, two columns on phones and four on wide screens */
+.services{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;align-items:stretch}
+.service{box-sizing:border-box;min-width:0;min-height:185px;height:100%;margin:0;padding:20px 16px;border-radius:16px;border:1px solid var(--line);background:linear-gradient(145deg,#111d30,#0b1220);display:flex;flex-direction:column;align-items:center;text-align:center;transition:transform .25s,border-color .25s}
+.service:hover{transform:translateY(-3px);border-color:#ff9d1670}
+.service-icon{width:42px;height:42px;flex:0 0 42px;display:grid;place-items:center;border-radius:12px;background:#102f48;color:var(--blue);font-size:22px;margin:0 auto 11px}
+.service h3{width:100%;min-height:2.8em;display:flex;align-items:center;justify-content:center;margin:0 0 7px;font-size:16px;line-height:1.45;overflow-wrap:anywhere}
+.service p{width:100%;margin:0;flex:1;color:var(--muted);font-size:13px;line-height:1.7}
+
+.price{position:relative;overflow:hidden;border:1px solid #71551d;border-radius:22px;text-align:center;padding:38px 22px;background:radial-gradient(ellipse at top,#332711,#121827 65%)}
+.price:after{content:"";position:absolute;width:250px;height:250px;border:1px solid #ff9d1620;border-radius:50%;top:-170px;left:calc(50% - 125px)}
+.price strong{display:block;font-size:clamp(27px,5vw,40px);color:#ffb32c;margin:10px 0}.price p{color:var(--muted);line-height:1.8}
+.contact{border:1px solid var(--line);border-radius:22px;padding:35px 20px;text-align:center;background:linear-gradient(135deg,#101827,#0c1d30)}
+.contact p{color:var(--muted);line-height:1.8}
+.contact-actions{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin-top:18px}
+footer{text-align:center;padding:28px 15px;color:#9cacc2;border-top:1px solid #24344a}
+footer img{width:150px;max-height:80px;object-fit:contain}footer p{font-size:12px;letter-spacing:2px;direction:ltr}
+.reveal{opacity:1;transform:none;transition:opacity .45s ease,transform .45s ease}.reveal.visible{opacity:1;transform:translateY(0)}
+.floating-wa{position:fixed;bottom:18px;left:18px;z-index:30;background:#20c765;color:#052312;border-radius:99px;padding:13px 17px;text-decoration:none;font-weight:900;box-shadow:0 8px 30px #0006;transition:transform .2s}.floating-wa:hover{transform:translateY(-3px)}
+@keyframes logoIn{from{opacity:0;transform:translateY(12px) scale(.97)}to{opacity:1;transform:translateY(0) scale(1)}}
+@keyframes float{from{transform:translate(0,0)}to{transform:translate(35px,-25px)}}
+
+/* Paid ads table */
+.table-scroll-hint{display:none;text-align:center;color:#a9e8ff;font-size:12px;margin:0 0 10px;line-height:1.7}
+.package-table-wrap{display:block;visibility:visible;width:100%;max-width:100%;overflow-x:auto;overscroll-behavior-x:contain;border:1px solid #30445e;border-radius:16px;background:#0b1321;margin-top:22px;-webkit-overflow-scrolling:touch}
+.package-table{width:100%;min-width:900px;border-collapse:separate;border-spacing:0;text-align:center;font-size:13px;line-height:1.6}
+.package-table th,.package-table td{padding:12px 10px;border-bottom:1px solid #26384e;border-left:1px solid #26384e;vertical-align:middle}
+.package-table thead th{background:#14243a;color:#dff4ff;font-weight:800;white-space:normal}
+.package-table thead small{display:block;color:#9eb6cc;font-size:11px;font-weight:500}
+.package-table tbody th{color:#fff;background:#101e31;white-space:nowrap}
+.package-table tbody tr:nth-child(even) td{background:#0e1929}
+.package-table tbody tr:hover td,.package-table tbody tr:hover th{background:#14253a}
+.package-table .table-price{color:#ffbd4b;font-weight:900;white-space:nowrap;font-size:14px}
+.table-cta{display:inline-block;text-decoration:none;background:linear-gradient(110deg,#12b9ff,#65d9ff);color:#07111d;font-weight:900;padding:8px 12px;border-radius:9px;white-space:nowrap}
+.package-note{margin:16px 0 0;padding:15px 17px;border:1px solid #71551d;border-radius:12px;background:#201a0d;color:#e7d6ae;font-size:13px;line-height:1.8}
+.package-heading{text-align:center;margin-bottom:22px}.package-heading p{color:var(--muted);line-height:1.8;margin:8px auto 0;max-width:700px}
+
+@media(min-width:900px){.services{grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}.service{min-height:190px;padding:20px 16px}.service h3{font-size:16px}.service p{font-size:13px}}
+@media(max-width:899px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.services{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.service{min-height:180px;padding:16px 12px}.service h3{font-size:14px}.service p{font-size:12px}}
+@media(max-width:600px){
+ body{min-width:0;width:100%;font-size:15px}.nav{min-height:64px}.brand{gap:7px}.brand img{width:78px;height:49px}.brand-slogan{font-size:10px;max-width:105px;line-height:1.4}.mobile-wa{display:inline-flex}.nav-links{display:none;position:absolute;top:64px;right:0;left:0;padding:15px;background:#0c1423;border:1px solid var(--line);border-radius:13px;flex-direction:column;align-items:stretch}.nav-links.open{display:flex;z-index:31;box-shadow:0 18px 35px #0008}.nav-links a{padding:10px}.nav-cta{display:none}
+ .hero{padding:34px 14px 30px}.hero-logo{width:min(300px,76vw);max-height:150px}.hero p{font-size:15px;line-height:1.75}.hero-actions{margin-top:22px}.hero-actions .btn{width:100%;max-width:340px}.stats{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));align-items:stretch;gap:9px;margin-top:18px;max-width:460px}.stat{width:100%;min-width:0;min-height:54px;padding:9px 8px;justify-content:center;text-align:center;font-size:11px;overflow-wrap:anywhere}.stat b{line-height:1.45}.stat-icon{font-size:14px}
+ .section-head{display:block}.section-head p{margin-top:8px}.grid{grid-template-columns:1fr;gap:14px}section{padding:36px 0}.video-box{aspect-ratio:16/9}
+ .services{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.service{min-height:184px;padding:13px 8px;border-radius:14px}.service-icon{width:36px;height:36px;flex-basis:36px;font-size:20px;margin-bottom:9px}.service h3{font-size:12px;min-height:3em}.service p{font-size:11px;line-height:1.6}
+ .table-scroll-hint{display:block}.package-table{min-width:900px}.package-table th,.package-table td{padding:10px 8px}.floating-wa{bottom:12px;left:12px;padding:10px 13px;font-size:13px}
+}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}.reveal{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<header class="site-header">
+  <nav class="nav" aria-label="التنقل الرئيسي">
+    <a class="brand" href="#top" aria-label="الرئيسية">
+      <img src="assets/nextad-logo.png" alt="شعار NextAd AI">
+      <span class="brand-slogan">إعلانات أذكى، نتائج أكبر</span>
+    </a>
+    <a class="mobile-wa" href="https://wa.me/201559265622" aria-label="تواصل معنا على واتساب">📲 واتساب</a>
+    <div class="nav-links" id="navLinks">
+      <a href="#works">أعمالنا</a><a href="#services">خدماتنا</a><a href="#paid-ads">الإعلانات الممولة</a><a href="#pricing">الأسعار</a><a href="#contact">تواصل معنا</a>
+    </div>
+    <a class="btn btn-outline nav-cta" href="https://wa.me/201559265622">اطلب إعلانك</a>
+  </nav>
+</header>
+
+<header class="hero" id="top">
+  <img class="hero-logo" src="assets/nextad-logo.png" alt="NextAd AI — Smart Ads, Bigger Results">
+  <div class="eyebrow">CREATIVE AI STUDIO</div>
+  <h1>خلّي إعلانك <span class="gradient-text">يتشاف وميعدّيش</span> 🔥</h1>
+  <p>بنحوّل أفكارك لفيديوهات إعلانية إبداعية باستخدام الذكاء الاصطناعي، بتصميم سينمائي يناسب براندك ويشد الانتباه.</p>
+  <div class="hero-actions"><a class="btn btn-primary" href="#works">▶ شوف أعمالنا</a><a class="btn btn-outline" href="https://wa.me/201559265622?text=%D8%A3%D9%87%D9%84%D8%A7%20NextAdAI%D8%8C%20%D8%B9%D8%A7%D9%8A%D8%B2%20%D8%A3%D8%B9%D9%85%D9%84%20%D8%A5%D8%B9%D9%84%D8%A7%D9%86">اطلب إعلانك الآن ↗</a><a class="btn btn-packages" href="#paid-ads">📣 باقات الإعلانات الممولة</a></div>
+  <div class="stats">
+    <div class="stat"><span class="stat-icon">✦</span><b>إعلانات AI سينمائية</b></div>
+    <div class="stat"><span class="stat-icon">◈</span><b>إعلانات المنتجات</b></div>
+    <div class="stat"><span class="stat-icon">🍽</span><b>إعلانات المطاعم والكافيهات</b></div>
+    <div class="stat"><span class="stat-icon">▦</span><b>إعلانات الشركات والخدمات</b></div>
+    <div class="stat"><span class="stat-icon">▶</span><b>فيديوهات AI وريلز</b></div>
+    <div class="stat"><span class="stat-icon">▣</span><b>تصميمات للسوشيال ميديا</b></div>
+    <div class="stat"><span class="stat-icon">↗</span><b>إدارة الإعلانات الممولة</b></div>
+    <div class="stat"><span class="stat-icon">◎</span><b>إعداد الحملات واستهداف الجمهور</b></div>
+  </div>
+</header>
+
+<main class="wrap">
+<section id="works">
+  <div class="section-head reveal"><div><div class="kicker">SELECTED WORKS</div><h2>🎬 معرض أعمالنا</h2></div><p>نماذج من إعلانات NextAd AI. هنضيف روابط فيديوهاتك هنا بعد تجهيزها.</p></div>
+  <div class="grid">
+    <article class="card reveal"><div class="video-box"><button class="play" aria-label="تشغيل نموذج الإعلان 01" data-video="">▶</button></div><div class="details"><h3>نموذج إعلان 01</h3><p>فيديو إعلاني من أعمال NextAd AI.</p><span class="card-note">هنضيف الفيديو قريبًا</span></div></article>
+    <article class="card reveal"><div class="video-box"><button class="play" aria-label="تشغيل نموذج الإعلان 02" data-video="">▶</button></div><div class="details"><h3>نموذج إعلان 02</h3><p>فيديو إعلاني من أعمال NextAd AI.</p><span class="card-note">هنضيف الفيديو قريبًا</span></div></article>
+    <article class="card reveal"><div class="video-box"><button class="play" aria-label="تشغيل نموذج الإعلان 03" data-video="">▶</button></div><div class="details"><h3>نموذج إعلان 03</h3><p>فيديو إعلاني من أعمال NextAd AI.</p><span class="card-note">هنضيف الفيديو قريبًا</span></div></article>
+    <article class="card reveal"><div class="video-box"><button class="play" aria-label="تشغيل نموذج الإعلان 04" data-video="">▶</button></div><div class="details"><h3>نموذج إعلان 04</h3><p>فيديو إعلاني من أعمال NextAd AI.</p><span class="card-note">هنضيف الفيديو قريبًا</span></div></article>
+    <article class="card reveal"><div class="video-box"><button class="play" aria-label="تشغيل نموذج الإعلان 05" data-video="">▶</button></div><div class="details"><h3>نموذج إعلان 05</h3><p>فيديو إعلاني من أعمال NextAd AI.</p><span class="card-note">هنضيف الفيديو قريبًا</span></div></article>
+    <article class="card reveal"><div class="video-box"><button class="play" aria-label="تشغيل نموذج الإعلان 06" data-video="">▶</button></div><div class="details"><h3>نموذج إعلان 06</h3><p>فيديو إعلاني من أعمال NextAd AI.</p><span class="card-note">هنضيف الفيديو قريبًا</span></div></article>
+  </div>
+</section>
+
+<section id="services">
+  <div class="section-head reveal"><div><div class="kicker">WHAT WE CREATE</div><h2>خدماتنا</h2></div><p>محتوى بصري مصمم عشان يبرز مشروعك ويقدّم فكرتك بطريقة مميزة.</p></div>
+  <div class="services">
+    <article class="service reveal"><div class="service-icon">✦</div><h3>إعلانات المنتجات</h3><p>إعلانات سينمائية تبرز تفاصيل المنتج وتقدمه بشكل جذاب.</p></article>
+    <article class="service reveal"><div class="service-icon">🍽</div><h3>إعلانات المطاعم</h3><p>فيديوهات شهية للعروض والافتتاحات والمطاعم والكافيهات.</p></article>
+    <article class="service reveal"><div class="service-icon">▦</div><h3>إعلانات الشركات</h3><p>محتوى إعلاني للشركات والعيادات والمكاتب والخدمات.</p></article>
+    <article class="service reveal"><div class="service-icon">▶</div><h3>فيديوهات AI</h3><p>تحويل الأفكار إلى مشاهد إبداعية بالذكاء الاصطناعي.</p></article>
+    <article class="service reveal"><div class="service-icon">▣</div><h3>ريلز وسوشيال ميديا</h3><p>محتوى عمودي مناسب لمنصات التواصل الاجتماعي.</p></article>
+    <article class="service reveal"><div class="service-icon">✎</div><h3>تصميمات إعلانية</h3><p>تصميمات بصرية متناسقة مع هوية مشروعك.</p></article>
+  </div>
+</section>
+
+<section id="paid-ads">
+  <div class="package-heading reveal">
+    <div class="kicker">MEDIA BUYING PACKAGES</div>
+    <h2>باقات الإعلانات الممولة</h2>
+    <p>اختار الباقة المناسبة لنشاطك وابدأ تكبر مع NextAd AI.</p>
+  </div>
+  <p class="table-scroll-hint">👈 اسحب الجدول يمين وشمال لعرض كل تفاصيل الباقات 👉</p>
+  <div class="package-table-wrap reveal" role="region" aria-label="جدول باقات الإعلانات الممولة" tabindex="0">
+    <table class="package-table">
+      <thead><tr><th>الباقة</th><th>السعر <small>لمدة 30 يوم</small></th><th>الفيديوهات</th><th>متوسط الوصول</th><th>متوسط المشاهدات</th><th>متوسط الرسائل</th><th>متوسط المتابعين</th><th>اطلب الباقة</th></tr></thead>
+      <tbody>
+        <tr><th scope="row">بداية</th><td class="table-price">2,600 ج.م</td><td>1 فيديو</td><td>25–45 ألف</td><td>8–18 ألف</td><td>70–180</td><td>30–100</td><td><a class="table-cta" href="https://wa.me/201559265622?text=%D8%A3%D9%87%D9%84%D8%A7%20NextAd%20AI%D8%8C%20%D8%B9%D8%A7%D9%8A%D8%B2%20%D8%A3%D8%B7%D9%84%D8%A8%20%D8%A8%D8%A7%D9%82%D8%A9%20%D8%A8%D8%AF%D8%A7%D9%8A%D8%A9">اطلبها</a></td></tr>
+        <tr><th scope="row">أساسية</th><td class="table-price">3,500 ج.م</td><td>2 فيديو</td><td>35–60 ألف</td><td>12–25 ألف</td><td>100–250</td><td>50–140</td><td><a class="table-cta" href="https://wa.me/201559265622?text=%D8%A3%D9%87%D9%84%D8%A7%20NextAd%20AI%D8%8C%20%D8%B9%D8%A7%D9%8A%D8%B2%20%D8%A3%D8%B7%D9%84%D8%A8%20%D8%A8%D8%A7%D9%82%D8%A9%20%D8%A3%D8%B3%D8%A7%D8%B3%D9%8A%D8%A9">اطلبها</a></td></tr>
+        <tr><th scope="row">نمو</th><td class="table-price">4,300 ج.م</td><td>2 فيديو</td><td>45–75 ألف</td><td>15–32 ألف</td><td>120–300</td><td>60–180</td><td><a class="table-cta" href="https://wa.me/201559265622?text=%D8%A3%D9%87%D9%84%D8%A7%20NextAd%20AI%D8%8C%20%D8%B9%D8%A7%D9%8A%D8%B2%20%D8%A3%D8%B7%D9%84%D8%A8%20%D8%A8%D8%A7%D9%82%D8%A9%20%D9%86%D9%85%D9%88">اطلبها</a></td></tr>
+        <tr><th scope="row">متقدمة</th><td class="table-price">6,400 ج.م</td><td>3 فيديوهات</td><td>65–110 ألف</td><td>22–48 ألف</td><td>180–450</td><td>90–260</td><td><a class="table-cta" href="https://wa.me/201559265622?text=%D8%A3%D9%87%D9%84%D8%A7%20NextAd%20AI%D8%8C%20%D8%B9%D8%A7%D9%8A%D8%B2%20%D8%A3%D8%B7%D9%84%D8%A8%20%D8%A8%D8%A7%D9%82%D8%A9%20%D9%85%D8%AA%D9%82%D8%AF%D9%85%D8%A9">اطلبها</a></td></tr>
+        <tr><th scope="row">احترافية</th><td class="table-price">8,600 ج.م</td><td>4 فيديوهات</td><td>85–140 ألف</td><td>30–65 ألف</td><td>250–600</td><td>120–350</td><td><a class="table-cta" href="https://wa.me/201559265622?text=%D8%A3%D9%87%D9%84%D8%A7%20NextAd%20AI%D8%8C%20%D8%B9%D8%A7%D9%8A%D8%B2%20%D8%A3%D8%B7%D9%84%D8%A8%20%D8%A8%D8%A7%D9%82%D8%A9%20%D8%A7%D8%AD%D8%AA%D8%B1%D8%A7%D9%81%D9%8A%D8%A9">اطلبها</a></td></tr>
+        <tr><th scope="row">برو</th><td class="table-price">12,900 ج.م</td><td>5 فيديوهات</td><td>130–210 ألف</td><td>45–95 ألف</td><td>350–900</td><td>180–500</td><td><a class="table-cta" href="https://wa.me/201559265622?text=%D8%A3%D9%87%D9%84%D8%A7%20NextAd%20AI%D8%8C%20%D8%B9%D8%A7%D9%8A%D8%B2%20%D8%A3%D8%B7%D9%84%D8%A8%20%D8%A8%D8%A7%D9%82%D8%A9%20%D8%A8%D8%B1%D9%88">اطلبها</a></td></tr>
+        <tr><th scope="row">بريميوم</th><td class="table-price">17,200 ج.م</td><td>6 فيديوهات</td><td>170–280 ألف</td><td>60–125 ألف</td><td>500–1,200</td><td>220–700</td><td><a class="table-cta" href="https://wa.me/201559265622?text=%D8%A3%D9%87%D9%84%D8%A7%20NextAd%20AI%D8%8C%20%D8%B9%D8%A7%D9%8A%D8%B2%20%D8%A3%D8%B7%D9%84%D8%A8%20%D8%A8%D8%A7%D9%82%D8%A9%20%D8%A8%D8%B1%D9%8A%D9%85%D9%8A%D9%88%D9%85">اطلبها</a></td></tr>
+        <tr><th scope="row">بريميوم بلس</th><td class="table-price">21,500 ج.م</td><td>8 فيديوهات</td><td>210–350 ألف</td><td>75–155 ألف</td><td>600–1,500</td><td>280–850</td><td><a class="table-cta" href="https://wa.me/201559265622?text=%D8%A3%D9%87%D9%84%D8%A7%20NextAd%20AI%D8%8C%20%D8%B9%D8%A7%D9%8A%D8%B2%20%D8%A3%D8%B7%D9%84%D8%A8%20%D8%A8%D8%A7%D9%82%D8%A9%20%D8%A8%D8%B1%D9%8A%D9%85%D9%8A%D9%88%D9%85%20%D8%A8%D9%84%D8%B3">اطلبها</a></td></tr>
+        <tr><th scope="row">أدفانس</th><td class="table-price">32,200 ج.م</td><td>10 فيديوهات</td><td>300–500 ألف</td><td>105–230 ألف</td><td>900–2,200</td><td>400–1,200</td><td><a class="table-cta" href="https://wa.me/201559265622?text=%D8%A3%D9%87%D9%84%D8%A7%20NextAd%20AI%D8%8C%20%D8%B9%D8%A7%D9%8A%D8%B2%20%D8%A3%D8%B7%D9%84%D8%A8%20%D8%A8%D8%A7%D9%82%D8%A9%20%D8%A3%D8%AF%D9%81%D8%A7%D9%86%D8%B3">اطلبها</a></td></tr>
+        <tr><th scope="row">شركات</th><td class="table-price">43,000 ج.م</td><td>12 فيديو</td><td>400–650 ألف</td><td>140–310 ألف</td><td>1,200–3,000</td><td>500–1,600</td><td><a class="table-cta" href="https://wa.me/201559265622?text=%D8%A3%D9%87%D9%84%D8%A7%20NextAd%20AI%D8%8C%20%D8%B9%D8%A7%D9%8A%D8%B2%20%D8%A3%D8%B7%D9%84%D8%A8%20%D8%A8%D8%A7%D9%82%D8%A9%20%D8%B4%D8%B1%D9%83%D8%A7%D8%AA">اطلبها</a></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="package-note reveal"><strong>تنويه مهم:</strong> الأرقام الموضحة للوصول والمشاهدات والرسائل والمتابعين تقديرية وليست مضمونة، وقد تختلف حسب طبيعة النشاط والجمهور والمنافسة وجودة الإعلان وميزانية الحملة. يتم الاتفاق مسبقًا على ما إذا كانت ميزانية الإعلانات المدفوعة للمنصة مشمولة في سعر الباقة أو تُدفع بشكل منفصل.</p>
+</section>
+
+<section id="pricing"><div class="price reveal"><div class="kicker">SIMPLE PRICING</div><h2>ابدأ إعلانك الجديد</h2><strong>الأسعار تبدأ من 300 جنيه</strong><p>السعر النهائي بيتحدد حسب فكرة الإعلان ومدته ومتطلبات التنفيذ.</p><a class="btn btn-primary" href="https://wa.me/201559265622?text=%D8%A3%D9%87%D9%84%D8%A7%20NextAdAI%D8%8C%20%D8%B9%D8%A7%D9%8A%D8%B2%20%D8%A3%D8%B3%D8%AA%D9%81%D8%B3%D8%B1%20%D8%B9%D9%86%20%D8%B3%D8%B9%D8%B1%20%D8%A5%D8%B9%D9%84%D8%A7%D9%86">اسأل عن السعر</a></div></section>
+<section id="contact"><div class="contact reveal"><div class="kicker">LET'S CREATE</div><h2>عندك فكرة إعلان؟</h2><p>ابعتلنا تفاصيل منتجك أو خدمتك، وخلينا نحول فكرتك لإعلان مميز.</p><div class="contact-actions"><a class="btn btn-primary" href="https://wa.me/201559265622?text=%D8%A3%D9%87%D9%84%D8%A7%20NextAdAI%D8%8C%20%D8%B9%D8%A7%D9%8A%D8%B2%20%D8%A3%D8%B9%D9%85%D9%84%20%D8%A5%D8%B9%D9%84%D8%A7%D9%86">📲 تواصل على واتساب</a><a class="btn btn-outline" href="https://www.facebook.com/NextAdAi/" target="_blank" rel="noopener">صفحتنا على فيسبوك ↗</a></div></div></section>
+</main>
+<footer><img src="assets/nextad-logo.png" alt="NextAd AI"><p>SMART ADS • BIGGER RESULTS</p><div>© 2026 NextAd AI — جميع الحقوق محفوظة</div></footer>
+<a class="floating-wa" href="https://wa.me/201559265622" aria-label="تواصل عبر واتساب">📲 واتساب</a>
+<script>
+document.querySelectorAll('.reveal').forEach(el=>el.classList.add('visible'));
+document.querySelectorAll('a[href^="#"]').forEach(link=>link.addEventListener('click',event=>{const id=link.getAttribute('href').slice(1);const target=document.getElementById(id);if(target){event.preventDefault();target.scrollIntoView({behavior:'smooth',block:'start'});history.replaceState(null,'','#'+id);}}));
+document.querySelectorAll('[data-video]').forEach(button=>button.addEventListener('click',()=>{const url=button.dataset.video;if(!url){alert('هنضيف رابط الفيديو هنا بعد ما تجهز روابط إعلاناتك.');return}const id=(url.match(/(?:youtu\\.be\\/|youtube\\.com\\/(?:watch\\?v=|embed\\/|shorts\\/))([\\w-]{11})/)||[])[1];if(!id){window.open(url,'_blank','noopener');return}const card=button.closest('.card');const frame=document.createElement('iframe');frame.src='https://www.youtube-nocookie.com/embed/'+id+'?autoplay=1';frame.title=card.querySelector('h3').textContent;frame.allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';frame.allowFullscreen=true;card.querySelector('.video-box').appendChild(frame);card.classList.add('is-playing')}));
+</script>
+</body>
+</html>
