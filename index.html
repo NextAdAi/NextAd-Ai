@@ -132,6 +132,73 @@ footer p{font-size:12px;letter-spacing:2px;direction:ltr}
 @media(max-width:800px){.services{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.service{min-height:180px;padding:18px}}
 @media(max-width:600px){.services{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.service{min-height:190px;padding:14px;border-radius:14px}.service-icon{width:38px;height:38px;flex-basis:38px;font-size:20px;margin-bottom:10px}.service h3{font-size:14px;min-height:2.8em}.service p{font-size:12px;line-height:1.65}}
 
+
+/* Final responsive service grid normalization */
+.services{
+  display:grid !important;
+  grid-template-columns:repeat(2,minmax(0,1fr)) !important;
+  align-items:stretch !important;
+  gap:12px !important;
+}
+.services .service{
+  box-sizing:border-box !important;
+  width:100% !important;
+  min-width:0 !important;
+  min-height:178px !important;
+  height:100% !important;
+  margin:0 !important;
+  padding:16px 12px !important;
+  display:flex !important;
+  flex-direction:column !important;
+  align-items:center !important;
+  justify-content:flex-start !important;
+  text-align:center !important;
+  border-radius:15px !important;
+}
+.services .service-icon{
+  width:40px !important;
+  height:40px !important;
+  flex:0 0 40px !important;
+  display:flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+  margin:0 auto 10px !important;
+}
+.services .service h3{
+  width:100% !important;
+  min-height:2.8em !important;
+  margin:0 0 7px !important;
+  display:flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+  font-size:14px !important;
+  line-height:1.45 !important;
+  overflow-wrap:anywhere !important;
+}
+.services .service p{
+  width:100% !important;
+  margin:0 !important;
+  flex:1 !important;
+  font-size:12px !important;
+  line-height:1.55 !important;
+}
+@media(min-width:900px){
+ .services{grid-template-columns:repeat(4,minmax(0,1fr)) !important;gap:16px !important}
+ .services .service{min-height:190px !important;padding:20px 16px !important}
+ .services .service h3{font-size:15px !important}
+ .services .service p{font-size:13px !important}
+}
+@media(max-width:380px){
+ .services{gap:8px !important}
+ .services .service{padding:12px 8px !important;min-height:185px !important}
+ .services .service h3{font-size:12px !important}
+ .services .service p{font-size:11px !important}
+}
+
+
+.brand-slogan{display:block;font-size:clamp(11px,1.1vw,14px);font-weight:800;line-height:1.5;color:#dceeff;max-width:155px;white-space:normal;text-wrap:balance}
+@media(max-width:600px){.brand-slogan{font-size:10px;max-width:105px;line-height:1.45}}
+
 </style>
 </head>
 <body>
@@ -139,7 +206,7 @@ footer p{font-size:12px;letter-spacing:2px;direction:ltr}
   <nav class="nav" aria-label="التنقل الرئيسي">
     <a class="brand" href="#top" aria-label="NextAd AI الرئيسية">
       <img src="assets/nextad-logo.png" alt="شعار NextAd AI">
-      <span class="brand-name">Next<span class="blue">Ad</span><span class="orange">AI</span></span>
+      <span class="brand-name"><span class="brand-slogan">إعلانات أذكى، نتائج أكبر</span></span><span class="orange">AI</span></span>
     </a>
     <a class="mobile-packages-link" href="https://wa.me/201559265622" aria-label="تواصل معنا على واتساب">📲 واتساب</a>
     <div class="nav-links" id="navLinks">
@@ -189,39 +256,35 @@ footer p{font-size:12px;letter-spacing:2px;direction:ltr}
   </div>
 </section>
 
-<section id="paid-ads">
-  <div class="section-head reveal"><div><div class="kicker">PAID ADS & CAMPAIGNS</div><h2>📣 باقات الإعلانات الممولة</h2></div><p>اختار الباقة المناسبة لنشاطك، وخلّي فريق NextAd AI يساعدك في تجهيز حملتك الإعلانية ومتابعة أدائها.</p></div>
-  <p class="package-intro reveal">كل الباقات مدتها 30 يوم، وتشمل خدمات إدارة الحملات الموضحة في تفاصيل كل باقة. اضغط على الباقة اللي تناسبك للتواصل معنا على واتساب ومعرفة التفاصيل.</p>
-  <div class="package-table-wrap reveal" role="region" aria-label="جدول باقات الإعلانات الممولة" tabindex="0">
-    <table class="package-table">
-      <thead>
-        <tr>
-          <th>الباقة</th>
-          <th>السعر<br><small>30 يوم</small></th>
-          <th>الفيديوهات</th>
-          <th>متوسط الوصول<br><small>تقريبي</small></th>
-          <th>متوسط المشاهدات<br><small>تقريبي</small></th>
-          <th>متوسط الرسائل<br><small>تقريبي</small></th>
-          <th>متوسط المتقدمين<br><small>تقريبي</small></th>
-          <th>الخدمات المتضمنة</th>
-          <th>التواصل</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr><th scope="row">بداية</th><td class="table-price">2,600 ج.م</td><td>1 فيديو</td><td>25–45 ألف</td><td>8–18 ألف</td><td>70–180</td><td>30–100</td><td>حملة واحدة، استهداف الجمهور، متابعة الحملة، تقرير نهاية الشهر</td><td><a class="table-cta" href="https://wa.me/201559265622?text=%D8%A3%D9%87%D9%84%D8%A7%20NextAd%20AI%D8%8C%20%D8%B9%D8%A7%D9%8A%D8%B2%20%D8%A3%D8%B3%D8%AA%D9%81%D8%B3%D8%B1%20%D8%B9%D9%86%20%D8%A8%D8%A7%D9%82%D8%A9%20%D8%A8%D8%AF%D8%A7%D9%8A%D8%A9">اطلبها</a></td></tr>
-        <tr><th scope="row">أساسية</th><td class="table-price">3,500 ج.م</td><td>2 فيديو</td><td>35–60 ألف</td><td>12–25 ألف</td><td>100–250</td><td>50–140</td><td>حملتان إعلانيتان، استهداف الجمهور، متابعة وتحسين، تقرير دوري</td><td><a class="table-cta" href="https://wa.me/201559265622?text=%D8%A3%D9%87%D9%84%D8%A7%20NextAd%20AI%D8%8C%20%D8%B9%D8%A7%D9%8A%D8%B2%20%D8%A3%D8%B3%D8%AA%D9%81%D8%B3%D8%B1%20%D8%B9%D9%86%20%D8%A8%D8%A7%D9%82%D8%A9%20%D8%A3%D8%B3%D8%A7%D8%B3%D9%8A%D8%A9">اطلبها</a></td></tr>
-        <tr><th scope="row">نمو</th><td class="table-price">4,300 ج.م</td><td>2 فيديو</td><td>45–75 ألف</td><td>15–32 ألف</td><td>120–300</td><td>60–180</td><td>3 حملات إعلانية، اختيار أكثر من إعلان، إعادة استهداف، تقرير دوري</td><td><a class="table-cta" href="https://wa.me/201559265622?text=%D8%A3%D9%87%D9%84%D8%A7%20NextAd%20AI%D8%8C%20%D8%B9%D8%A7%D9%8A%D8%B2%20%D8%A3%D8%B3%D8%AA%D9%81%D8%B3%D8%B1%20%D8%B9%D9%86%20%D8%A8%D8%A7%D9%82%D8%A9%20%D9%86%D9%85%D9%88">اطلبها</a></td></tr>
-        <tr><th scope="row">متقدمة</th><td class="table-price">6,400 ج.م</td><td>3 فيديوهات</td><td>65–110 ألف</td><td>22–48 ألف</td><td>180–450</td><td>90–260</td><td>حملات متعددة، جماهير مختلفة، إعادة استهداف، تقرير دوري</td><td><a class="table-cta" href="https://wa.me/201559265622?text=%D8%A3%D9%87%D9%84%D8%A7%20NextAd%20AI%D8%8C%20%D8%B9%D8%A7%D9%8A%D8%B2%20%D8%A3%D8%B3%D8%AA%D9%81%D8%B3%D8%B1%20%D8%B9%D9%86%20%D8%A8%D8%A7%D9%82%D8%A9%20%D9%85%D8%AA%D9%82%D8%AF%D9%85%D8%A9">اطلبها</a></td></tr>
-        <tr><th scope="row">احترافية</th><td class="table-price">8,600 ج.م</td><td>4 فيديوهات</td><td>85–140 ألف</td><td>30–65 ألف</td><td>250–600</td><td>120–350</td><td>حملات متنوعة، اختبارات A/B، إعادة استهداف، تقارير تفصيلية</td><td><a class="table-cta" href="https://wa.me/201559265622?text=%D8%A3%D9%87%D9%84%D8%A7%20NextAd%20AI%D8%8C%20%D8%B9%D8%A7%D9%8A%D8%B2%20%D8%A3%D8%B3%D8%AA%D9%81%D8%B3%D8%B1%20%D8%B9%D9%86%20%D8%A8%D8%A7%D9%82%D8%A9%20%D8%A7%D8%AD%D8%AA%D8%B1%D8%A7%D9%81%D9%8A%D8%A9">اطلبها</a></td></tr>
-        <tr><th scope="row">برو</th><td class="table-price">12,900 ج.م</td><td>5 فيديوهات</td><td>130–210 ألف</td><td>45–95 ألف</td><td>350–900</td><td>180–500</td><td>حملات متعددة، استهداف دقيق، إعادة استهداف، تحليل النتائج</td><td><a class="table-cta" href="https://wa.me/201559265622?text=%D8%A3%D9%87%D9%84%D8%A7%20NextAd%20AI%D8%8C%20%D8%B9%D8%A7%D9%8A%D8%B2%20%D8%A3%D8%B3%D8%AA%D9%81%D8%B3%D8%B1%20%D8%B9%D9%86%20%D8%A8%D8%A7%D9%82%D8%A9%20%D8%A8%D8%B1%D9%88">اطلبها</a></td></tr>
-        <tr><th scope="row">بزنس</th><td class="table-price">17,200 ج.م</td><td>6 فيديوهات</td><td>170–280 ألف</td><td>60–125 ألف</td><td>500–1,200</td><td>220–700</td><td>حملات متقدمة، اختبار إعلانات، إعادة استهداف، تقارير أسبوعية</td><td><a class="table-cta" href="https://wa.me/201559265622?text=%D8%A3%D9%87%D9%84%D8%A7%20NextAd%20AI%D8%8C%20%D8%B9%D8%A7%D9%8A%D8%B2%20%D8%A3%D8%B3%D8%AA%D9%81%D8%B3%D8%B1%20%D8%B9%D9%86%20%D8%A8%D8%A7%D9%82%D8%A9%20%D8%A8%D8%B2%D9%86%D8%B3">اطلبها</a></td></tr>
-        <tr><th scope="row">بريميوم</th><td class="table-price">21,500 ج.م</td><td>8 فيديوهات</td><td>210–350 ألف</td><td>75–155 ألف</td><td>600–1,500</td><td>280–850</td><td>استراتيجية متكاملة، حملات متنوعة، إعادة استهداف، تقارير وتحليل متقدم</td><td><a class="table-cta" href="https://wa.me/201559265622?text=%D8%A3%D9%87%D9%84%D8%A7%20NextAd%20AI%D8%8C%20%D8%B9%D8%A7%D9%8A%D8%B2%20%D8%A3%D8%B3%D8%AA%D9%81%D8%B3%D8%B1%20%D8%B9%D9%86%20%D8%A8%D8%A7%D9%82%D8%A9%20%D8%A8%D8%B1%D9%8A%D9%85%D9%8A%D9%88%D9%85">اطلبها</a></td></tr>
-        <tr><th scope="row">أدفانس</th><td class="table-price">32,200 ج.م</td><td>10 فيديوهات</td><td>300–500 ألف</td><td>105–230 ألف</td><td>900–2,200</td><td>400–1,200</td><td>إدارة شاملة، استهداف متقدم، اختبار مستمر، تقارير أداء</td><td><a class="table-cta" href="https://wa.me/201559265622?text=%D8%A3%D9%87%D9%84%D8%A7%20NextAd%20AI%D8%8C%20%D8%B9%D8%A7%D9%8A%D8%B2%20%D8%A3%D8%B3%D8%AA%D9%81%D8%B3%D8%B1%20%D8%B9%D9%86%20%D8%A8%D8%A7%D9%82%D8%A9%20%D8%A3%D8%AF%D9%81%D8%A7%D9%86%D8%B3">اطلبها</a></td></tr>
-        <tr><th scope="row">شركات</th><td class="table-price">43,000 ج.م</td><td>12 فيديو</td><td>400–650 ألف</td><td>140–310 ألف</td><td>1,200–3,000</td><td>500–1,600</td><td>استراتيجية متكاملة، حملات متعددة، إعادة استهداف، تقارير احترافية</td><td><a class="table-cta" href="https://wa.me/201559265622?text=%D8%A3%D9%87%D9%84%D8%A7%20NextAd%20AI%D8%8C%20%D8%B9%D8%A7%D9%8A%D8%B2%20%D8%A3%D8%B3%D8%AA%D9%81%D8%B3%D8%B1%20%D8%B9%D9%86%20%D8%A8%D8%A7%D9%82%D8%A9%20%D8%B4%D8%B1%D9%83%D8%A7%D8%AA">اطلبها</a></td></tr>
-      </tbody>
-    </table>
+<section id="paid-ads" class="section">
+  <div class="container">
+    <div class="section-heading reveal">
+      <span class="eyebrow">MEDIA BUYING PACKAGES</span>
+      <h2>باقات الإعلانات الممولة</h2>
+      <p>اختار الباقة المناسبة لنشاطك وابدأ تكبر مع NextAd AI.</p>
+    </div>
+    <div class="package-table-wrap reveal" role="region" aria-label="جدول باقات الإعلانات الممولة" tabindex="0">
+      <table class="package-table">
+        <thead><tr>
+          <th>الباقة</th><th>السعر <small>لمدة 30 يوم</small></th><th>الفيديوهات</th>
+          <th>متوسط الوصول</th><th>متوسط المشاهدات</th><th>متوسط الرسائل</th><th>متوسط المتابعين</th><th>اطلب الباقة</th>
+        </tr></thead>
+        <tbody>
+          <tr><th scope="row">بداية</th><td class="table-price">2,600 ج.م</td><td>1 فيديو</td><td>25–45 ألف</td><td>8–18 ألف</td><td>70–180</td><td>30–100</td><td><a class="table-cta" href="https://wa.me/201559265622?text=%D8%A3%D9%87%D9%84%D8%A7%20NextAd%20AI%D8%8C%20%D8%B9%D8%A7%D9%8A%D8%B2%20%D8%A3%D8%B7%D9%84%D8%A8%20%D8%A8%D8%A7%D9%82%D8%A9%20%D8%A8%D8%AF%D8%A7%D9%8A%D8%A9">اطلبها</a></td></tr>
+          <tr><th scope="row">أساسية</th><td class="table-price">3,500 ج.م</td><td>2 فيديو</td><td>35–60 ألف</td><td>12–25 ألف</td><td>100–250</td><td>50–140</td><td><a class="table-cta" href="https://wa.me/201559265622?text=%D8%A3%D9%87%D9%84%D8%A7%20NextAd%20AI%D8%8C%20%D8%B9%D8%A7%D9%8A%D8%B2%20%D8%A3%D8%B7%D9%84%D8%A8%20%D8%A8%D8%A7%D9%82%D8%A9%20%D8%A3%D8%B3%D8%A7%D8%B3%D9%8A%D8%A9">اطلبها</a></td></tr>
+          <tr><th scope="row">نمو</th><td class="table-price">4,300 ج.م</td><td>2 فيديو</td><td>45–75 ألف</td><td>15–32 ألف</td><td>120–300</td><td>60–180</td><td><a class="table-cta" href="https://wa.me/201559265622?text=%D8%A3%D9%87%D9%84%D8%A7%20NextAd%20AI%D8%8C%20%D8%B9%D8%A7%D9%8A%D8%B2%20%D8%A3%D8%B7%D9%84%D8%A8%20%D8%A8%D8%A7%D9%82%D8%A9%20%D9%86%D9%85%D9%88">اطلبها</a></td></tr>
+          <tr><th scope="row">متقدمة</th><td class="table-price">6,400 ج.م</td><td>3 فيديوهات</td><td>65–110 ألف</td><td>22–48 ألف</td><td>180–450</td><td>90–260</td><td><a class="table-cta" href="https://wa.me/201559265622?text=%D8%A3%D9%87%D9%84%D8%A7%20NextAd%20AI%D8%8C%20%D8%B9%D8%A7%D9%8A%D8%B2%20%D8%A3%D8%B7%D9%84%D8%A8%20%D8%A8%D8%A7%D9%82%D8%A9%20%D9%85%D8%AA%D9%82%D8%AF%D9%85%D8%A9">اطلبها</a></td></tr>
+          <tr><th scope="row">احترافية</th><td class="table-price">8,600 ج.م</td><td>4 فيديوهات</td><td>85–140 ألف</td><td>30–65 ألف</td><td>250–600</td><td>120–350</td><td><a class="table-cta" href="https://wa.me/201559265622?text=%D8%A3%D9%87%D9%84%D8%A7%20NextAd%20AI%D8%8C%20%D8%B9%D8%A7%D9%8A%D8%B2%20%D8%A3%D8%B7%D9%84%D8%A8%20%D8%A8%D8%A7%D9%82%D8%A9%20%D8%A7%D8%AD%D8%AA%D8%B1%D8%A7%D9%81%D9%8A%D8%A9">اطلبها</a></td></tr>
+          <tr><th scope="row">برو</th><td class="table-price">12,900 ج.م</td><td>5 فيديوهات</td><td>130–210 ألف</td><td>45–95 ألف</td><td>350–900</td><td>180–500</td><td><a class="table-cta" href="https://wa.me/201559265622?text=%D8%A3%D9%87%D9%84%D8%A7%20NextAd%20AI%D8%8C%20%D8%B9%D8%A7%D9%8A%D8%B2%20%D8%A3%D8%B7%D9%84%D8%A8%20%D8%A8%D8%A7%D9%82%D8%A9%20%D8%A8%D8%B1%D9%88">اطلبها</a></td></tr>
+          <tr><th scope="row">بريميوم</th><td class="table-price">17,200 ج.م</td><td>6 فيديوهات</td><td>170–280 ألف</td><td>60–125 ألف</td><td>500–1,200</td><td>220–700</td><td><a class="table-cta" href="https://wa.me/201559265622?text=%D8%A3%D9%87%D9%84%D8%A7%20NextAd%20AI%D8%8C%20%D8%B9%D8%A7%D9%8A%D8%B2%20%D8%A3%D8%B7%D9%84%D8%A8%20%D8%A8%D8%A7%D9%82%D8%A9%20%D8%A8%D8%B1%D9%8A%D9%85%D9%8A%D9%88%D9%85">اطلبها</a></td></tr>
+          <tr><th scope="row">بريميوم بلس</th><td class="table-price">21,500 ج.م</td><td>8 فيديوهات</td><td>210–350 ألف</td><td>75–155 ألف</td><td>600–1,500</td><td>280–850</td><td><a class="table-cta" href="https://wa.me/201559265622?text=%D8%A3%D9%87%D9%84%D8%A7%20NextAd%20AI%D8%8C%20%D8%B9%D8%A7%D9%8A%D8%B2%20%D8%A3%D8%B7%D9%84%D8%A8%20%D8%A8%D8%A7%D9%82%D8%A9%20%D8%A8%D8%B1%D9%8A%D9%85%D9%8A%D9%88%D9%85%20%D8%A8%D9%84%D8%B3">اطلبها</a></td></tr>
+          <tr><th scope="row">أدفانس</th><td class="table-price">32,200 ج.م</td><td>10 فيديوهات</td><td>300–500 ألف</td><td>105–230 ألف</td><td>900–2,200</td><td>400–1,200</td><td><a class="table-cta" href="https://wa.me/201559265622?text=%D8%A3%D9%87%D9%84%D8%A7%20NextAd%20AI%D8%8C%20%D8%B9%D8%A7%D9%8A%D8%B2%20%D8%A3%D8%B7%D9%84%D8%A8%20%D8%A8%D8%A7%D9%82%D8%A9%20%D8%A3%D8%AF%D9%81%D8%A7%D9%86%D8%B3">اطلبها</a></td></tr>
+          <tr><th scope="row">شركات</th><td class="table-price">43,000 ج.م</td><td>12 فيديو</td><td>400–650 ألف</td><td>140–310 ألف</td><td>1,200–3,000</td><td>500–1,600</td><td><a class="table-cta" href="https://wa.me/201559265622?text=%D8%A3%D9%87%D9%84%D8%A7%20NextAd%20AI%D8%8C%20%D8%B9%D8%A7%D9%8A%D8%B2%20%D8%A3%D8%B7%D9%84%D8%A8%20%D8%A8%D8%A7%D9%82%D8%A9%20%D8%B4%D8%B1%D9%83%D8%A7%D8%AA">اطلبها</a></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="package-note reveal"><strong>تنويه:</strong> الأرقام الموضحة للوصول والمشاهدات والرسائل والمتابعين تقديرية وليست مضمونة، وقد تختلف حسب طبيعة النشاط والجمهور والمنافسة وجودة الإعلان وميزانية الحملة. يتم الاتفاق مسبقًا على ما إذا كانت ميزانية الإعلانات المدفوعة للمنصة مشمولة في سعر الباقة أو تُدفع بشكل منفصل.</p>
   </div>
-  <div class="package-note reveal"><strong>مهم:</strong> الأرقام الخاصة بالوصول والمشاهدات والرسائل والعملاء المحتملين تقديرية وليست مضمونة، وقد تختلف حسب النشاط والجمهور والمنافسة ومحتوى الإعلان. يجب توضيح ما إذا كانت ميزانية الإعلان المدفوعة للمنصة مشمولة في سعر الباقة أو تُدفع بشكل منفصل قبل اعتماد الأسعار.</div>
 </section>
 
 <section id="pricing"><div class="price reveal"><div class="kicker">SIMPLE PRICING</div><h2>ابدأ إعلانك الجديد</h2><strong>الأسعار تبدأ من 300 جنيه</strong><p>السعر النهائي بيتحدد حسب فكرة الإعلان ومدته ومتطلبات التنفيذ.</p><a class="btn btn-primary" href="https://wa.me/201559265622?text=%D8%A3%D9%87%D9%84%D8%A7%20NextAdAI%D8%8C%20%D8%B9%D8%A7%D9%8A%D8%B2%20%D8%A3%D8%B3%D8%AA%D9%81%D8%B3%D8%B1%20%D8%B9%D9%86%20%D8%B3%D8%B9%D8%B1%20%D8%A5%D8%B9%D9%84%D8%A7%D9%86">اسأل عن السعر</a></div></section>
