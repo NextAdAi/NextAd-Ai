@@ -1,82 +1,150 @@
-
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>NextAdAI | معرض الأعمال</title>
+<meta name="theme-color" content="#080c18">
+<meta name="description" content="NextAd AI — إعلانات إبداعية بالذكاء الاصطناعي. شاهد أعمالنا واطلب إعلانك القادم.">
+<title>NextAd AI | إعلانات إبداعية بالذكاء الاصطناعي</title>
 <style>
+:root{--bg:#080c18;--panel:#101a2b;--panel2:#0c1423;--blue:#12b9ff;--orange:#ff9d16;--muted:#c5d2e5;--line:#293951}
 *{box-sizing:border-box}
-body{margin:0;background:#080c18;color:#fff;font-family:Arial,Tahoma,sans-serif}
-header{text-align:center;padding:35px 15px;background:radial-gradient(ellipse at top,#174c78,#080c18 75%)}
-.logo{font-size:42px;font-weight:bold;direction:ltr}
-.blue{color:#12b9ff}.orange{color:#ff9d16}
-.tag{font-size:11px;letter-spacing:3px;direction:ltr;color:#d5e7f7}
-h1{font-size:clamp(28px,6vw,46px);margin:30px 0 10px}
-p{color:#c5d2e5;line-height:1.8}
-.btn{display:inline-block;text-decoration:none;padding:13px 20px;border-radius:10px;background:linear-gradient(100deg,#12b9ff,#ff9d16);color:#08111d;font-weight:bold;margin:8px 4px}
-.wrap{max-width:1050px;width:92%;margin:auto}
-section{padding:30px 0}
-h2{font-size:27px}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
-.card{background:#111a2b;border:1px solid #293951;border-radius:15px;overflow:hidden}
-.cover{aspect-ratio:16/10;display:grid;place-items:center;background:linear-gradient(135deg,#15466e,#101a2b,#75400c)}
-.play{font-size:34px;background:linear-gradient(100deg,#12b9ff,#ff9d16);color:#07111d;border-radius:50%;width:58px;height:58px;display:grid;place-items:center}
-.details{padding:16px}
-.details h3{margin:0}
-.details p{font-size:14px}
-.price{border:1px solid #71551d;border-radius:16px;text-align:center;padding:25px;background:#121827}
-.price strong{font-size:32px;color:#ffb32c}
-.contact{border:1px solid #293951;border-radius:16px;padding:25px;text-align:center;background:#101827}
-footer{text-align:center;padding:30px 15px;color:#9cacc2}
+html{scroll-behavior:smooth;scroll-padding-top:85px}
+body{margin:0;background:var(--bg);color:#fff;font-family:Arial,Tahoma,sans-serif;overflow-x:hidden}
+a{color:inherit}
+button,a{-webkit-tap-highlight-color:transparent}
+.site-header{position:sticky;top:0;z-index:20;background:rgba(8,12,24,.86);backdrop-filter:blur(16px);border-bottom:1px solid rgba(80,130,180,.18)}
+.nav{max-width:1120px;width:92%;margin:auto;min-height:78px;display:flex;align-items:center;justify-content:space-between;gap:18px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;min-width:0}
+.brand img{width:130px;height:68px;object-fit:contain;border-radius:8px}
+.brand-name{font-size:20px;font-weight:900;direction:ltr;white-space:nowrap}
+.blue{color:var(--blue)}.orange{color:var(--orange)}
+.nav-links{display:flex;align-items:center;gap:22px}
+.nav-links a{text-decoration:none;color:#d7e4f5;font-size:14px;transition:color .2s}
+.nav-links a:hover{color:var(--blue)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;text-decoration:none;padding:13px 20px;border-radius:11px;font-weight:800;border:1px solid transparent;transition:transform .2s,box-shadow .2s,filter .2s;cursor:pointer}
+.btn:hover{transform:translateY(-3px);box-shadow:0 9px 28px #12b9ff20;filter:brightness(1.06)}
+.btn-primary{background:linear-gradient(105deg,var(--blue),#60d7ff);color:#07111d}
+.btn-outline{border-color:#ff9d1680;color:#ffbd60;background:#ff9d1608}
+.menu-btn{display:none;background:none;color:white;border:1px solid var(--line);border-radius:9px;padding:9px 12px;font-size:22px}
+.hero{position:relative;isolation:isolate;overflow:hidden;text-align:center;padding:76px 16px 64px;background:radial-gradient(ellipse at 50% 0%,#15517a 0%,#0c1b30 36%,var(--bg) 75%)}
+.hero:before,.hero:after{content:"";position:absolute;width:280px;height:280px;border-radius:50%;filter:blur(80px);opacity:.19;z-index:-1;animation:float 9s ease-in-out infinite alternate}
+.hero:before{background:var(--blue);top:10%;left:-100px}.hero:after{background:var(--orange);bottom:-130px;right:-80px;animation-delay:-4s}
+.hero-logo{width:min(420px,78vw);height:auto;max-height:230px;object-fit:contain;filter:drop-shadow(0 15px 35px #12b9ff20);animation:logoIn .8s ease both}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;margin:18px auto 0;padding:8px 13px;border:1px solid #12b9ff50;border-radius:99px;background:#0b2035;color:#a9e8ff;font-size:12px;letter-spacing:1.5px;direction:ltr}
+.eyebrow:before{content:"";width:7px;height:7px;background:var(--orange);border-radius:50%;box-shadow:0 0 12px var(--orange)}
+h1{font-size:clamp(30px,5.6vw,56px);line-height:1.25;margin:22px auto 12px;max-width:850px;letter-spacing:-1px}
+.gradient-text{background:linear-gradient(100deg,#fff 5%,var(--blue) 48%,#ffc05c 95%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p{max-width:680px;margin:0 auto;color:var(--muted);font-size:17px;line-height:1.9}
+.hero-actions{display:flex;justify-content:center;flex-wrap:wrap;gap:10px;margin-top:28px}
+.stats{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin:34px auto 0}
+.stat{border:1px solid #30445e;background:#0b1423b8;padding:10px 15px;border-radius:12px;color:#c9d8eb;font-size:13px}
+.stat b{color:#fff}
+.wrap{max-width:1120px;width:92%;margin:auto}
+section{padding:68px 0}
+.section-head{display:flex;justify-content:space-between;align-items:end;gap:18px;margin-bottom:25px}
+.kicker{color:var(--orange);font-size:12px;letter-spacing:2px;direction:ltr}
+h2{font-size:clamp(25px,4vw,35px);margin:8px 0}
+.section-head p{margin:0;color:var(--muted);line-height:1.8;max-width:620px}
+.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.card{background:linear-gradient(155deg,#121e31,#0c1422);border:1px solid var(--line);border-radius:17px;overflow:hidden;transition:transform .25s,border-color .25s,box-shadow .25s;min-width:0}
+.card:hover{transform:translateY(-6px);border-color:#12b9ff80;box-shadow:0 16px 42px #0005}
+.video-box{aspect-ratio:16/10;position:relative;display:grid;place-items:center;overflow:hidden;background:radial-gradient(circle at 30% 20%,#15527b,#111a2b 52%,#422b16)}
+.video-box:before{content:"";position:absolute;inset:0;background:linear-gradient(135deg,#12b9ff15,transparent 45%,#ff9d161a);transition:transform .6s}
+.card:hover .video-box:before{transform:scale(1.12)}
+.play{position:relative;width:62px;height:62px;border:1px solid #ffffff70;border-radius:50%;display:grid;place-items:center;background:linear-gradient(130deg,#12b9ff,#ff9d16);color:#07111d;font-size:24px;padding-right:2px;box-shadow:0 0 0 9px #ffffff0b,0 0 28px #12b9ff55;transition:transform .25s}
+.card:hover .play{transform:scale(1.08)}
+.video-box video,.video-box iframe{position:absolute;inset:0;width:100%;height:100%;border:0;object-fit:cover}
+.video-box iframe{display:none}
+.card.is-playing .video-box iframe{display:block}
+.card.is-playing .play{display:none}
+.details{padding:17px}
+.details h3{margin:0;font-size:18px}
+.details p{font-size:14px;color:var(--muted);line-height:1.7;margin:9px 0 0}
+.card-note{display:inline-block;margin-top:12px;color:#ffbd60;font-size:12px}
+.services{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.service{padding:22px;border-radius:16px;border:1px solid var(--line);background:linear-gradient(145deg,#111d30,#0b1220);transition:transform .25s,border-color .25s}
+.service:hover{transform:translateY(-4px);border-color:#ff9d1670}
+.service-icon{width:44px;height:44px;display:grid;place-items:center;border-radius:12px;background:#102f48;color:var(--blue);font-size:23px;margin-bottom:14px}
+.service h3{margin:0 0 8px;font-size:17px}.service p{margin:0;color:var(--muted);font-size:14px;line-height:1.8}
+.price{position:relative;overflow:hidden;border:1px solid #71551d;border-radius:22px;text-align:center;padding:38px 22px;background:radial-gradient(ellipse at top,#332711,#121827 65%)}
+.price:after{content:"";position:absolute;width:250px;height:250px;border:1px solid #ff9d1620;border-radius:50%;top:-170px;left:calc(50% - 125px)}
+.price strong{display:block;font-size:clamp(27px,5vw,40px);color:#ffb32c;margin:10px 0}
+.price p{color:var(--muted);line-height:1.8}
+.contact{border:1px solid var(--line);border-radius:22px;padding:35px 20px;text-align:center;background:linear-gradient(135deg,#101827,#0c1d30)}
+.contact p{color:var(--muted);line-height:1.8}
+.contact-actions{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin-top:18px}
+footer{text-align:center;padding:30px 15px;color:#9cacc2;border-top:1px solid #24344a}
+footer img{width:150px;max-height:80px;object-fit:contain}
+footer p{font-size:12px;letter-spacing:2px;direction:ltr}
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .65s ease,transform .65s ease}
+.reveal.visible{opacity:1;transform:translateY(0)}
+.floating-wa{position:fixed;bottom:18px;left:18px;z-index:30;background:#20c765;color:#052312;border-radius:99px;padding:13px 17px;text-decoration:none;font-weight:900;box-shadow:0 8px 30px #0006;transition:transform .2s}
+.floating-wa:hover{transform:translateY(-3px)}
+@keyframes logoIn{from{opacity:0;transform:translateY(12px) scale(.97)}to{opacity:1;transform:translateY(0) scale(1)}}
+@keyframes float{from{transform:translate(0,0)}to{transform:translate(35px,-25px)}}
+@media(max-width:800px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.services{grid-template-columns:repeat(2,minmax(0,1fr))}.nav-links{gap:12px}.brand img{width:95px;height:55px}}
+@media(max-width:600px){.nav{min-height:68px}.brand img{width:100px;height:53px}.brand-name{font-size:17px}.menu-btn{display:block}.nav-links{display:none;position:absolute;top:68px;right:4%;left:4%;padding:15px;background:#0c1423;border:1px solid var(--line);border-radius:13px;flex-direction:column;align-items:stretch}.nav-links.open{display:flex}.nav-links a{padding:10px}.nav-cta{display:none}.hero{padding:45px 14px 48px}.hero-logo{width:min(340px,85vw);max-height:180px}.hero p{font-size:15px}.section-head{display:block}.grid,.services{grid-template-columns:1fr}.grid{gap:14px}.video-box{aspect-ratio:16/9}section{padding:48px 0}.floating-wa{bottom:12px;left:12px;padding:11px 14px;font-size:13px}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}.reveal{opacity:1;transform:none}}
 </style>
 </head>
 <body>
-<header>
-  <div class="logo">Next<span class="blue">Ad</span><span class="orange">AI</span></div>
-  <div class="tag">SMART ADS • BIGGER RESULTS</div>
-  <h1>خلّي إعلانك يتشاف وميعديش 🔥</h1>
-  <p>بنحوّل أفكارك لفيديوهات إعلانية إبداعية باستخدام الذكاء الاصطناعي.</p>
-  <a class="btn" href="#works">شوف أعمالنا</a>
-  <a class="btn" href="https://wa.me/201559265622">اطلب إعلانك</a>
+<header class="site-header">
+  <nav class="nav" aria-label="التنقل الرئيسي">
+    <a class="brand" href="#top" aria-label="NextAd AI الرئيسية">
+      <img src="assets/nextad-logo.png" alt="شعار NextAd AI">
+      <span class="brand-name">Next<span class="blue">Ad</span><span class="orange">AI</span></span>
+    </a>
+    <button class="menu-btn" id="menuBtn" aria-label="فتح القائمة" aria-expanded="false">☰</button>
+    <div class="nav-links" id="navLinks">
+      <a href="#works">أعمالنا</a><a href="#services">خدماتنا</a><a href="#pricing">الأسعار</a><a href="#contact">تواصل معنا</a>
+    </div>
+    <a class="btn btn-outline nav-cta" href="https://wa.me/201559265622">اطلب إعلانك</a>
+  </nav>
 </header>
-
+<header class="hero" id="top">
+  <img class="hero-logo" src="assets/nextad-logo.png" alt="NextAd AI — Smart Ads, Bigger Results">
+  <div class="eyebrow">CREATIVE AI STUDIO</div>
+  <h1>خلّي إعلانك <span class="gradient-text">يتشاف وميعدّيش</span> 🔥</h1>
+  <p>بنحوّل أفكارك لفيديوهات إعلانية إبداعية باستخدام الذكاء الاصطناعي، بتصميم سينمائي يناسب براندك ويشد الانتباه.</p>
+  <div class="hero-actions"><a class="btn btn-primary" href="#works">▶ شوف أعمالنا</a><a class="btn btn-outline" href="https://wa.me/201559265622?text=%D8%A3%D9%87%D9%84%D8%A7%20NextAdAI%D8%8C%20%D8%B9%D8%A7%D9%8A%D8%B2%20%D8%A3%D8%B9%D9%85%D9%84%20%D8%A5%D8%B9%D9%84%D8%A7%D9%86">اطلب إعلانك الآن ↗</a></div>
+  <div class="stats"><div class="stat"><b>AI</b> فيديوهات إبداعية</div><div class="stat"><b>9:16</b> ريلز وإعلانات عمودية</div><div class="stat"><b>300 جنيه</b> سعر البداية</div></div>
+</header>
 <main class="wrap">
 <section id="works">
-  <h2>🎬 معرض أعمال NextAdAI</h2>
-  <p>كل أعمالنا في مكان واحد. اختار أي نموذج لمشاهدة الفيديو بعد إضافة رابطه.</p>
+  <div class="section-head reveal"><div><div class="kicker">SELECTED WORKS</div><h2>🎬 معرض أعمالنا</h2></div><p>نماذج من إعلانات NextAd AI. هنضيف روابط فيديوهاتك هنا بعد تجهيزها.</p></div>
   <div class="grid">
-    <article class="card"><div class="cover"><div class="play">▶</div></div><div class="details"><h3>نموذج إعلان 01</h3><p>فيديو إعلاني من أعمال NextAdAI.</p></div></article>
-    <article class="card"><div class="cover"><div class="play">▶</div></div><div class="details"><h3>نموذج إعلان 02</h3><p>فيديو إعلاني من أعمال NextAdAI.</p></div></article>
-    <article class="card"><div class="cover"><div class="play">▶</div></div><div class="details"><h3>نموذج إعلان 03</h3><p>فيديو إعلاني من أعمال NextAdAI.</p></div></article>
-    <article class="card"><div class="cover"><div class="play">▶</div></div><div class="details"><h3>نموذج إعلان 04</h3><p>فيديو إعلاني من أعمال NextAdAI.</p></div></article>
-    <article class="card"><div class="cover"><div class="play">▶</div></div><div class="details"><h3>نموذج إعلان 05</h3><p>فيديو إعلاني من أعمال NextAdAI.</p></div></article>
-    <article class="card"><div class="cover"><div class="play">▶</div></div><div class="details"><h3>نموذج إعلان 06</h3><p>فيديو إعلاني من أعمال NextAdAI.</p></div></article>
+    <article class="card reveal"><div class="video-box"><button class="play" aria-label="تشغيل نموذج الإعلان 01" data-video="">▶</button></div><div class="details"><h3>نموذج إعلان 01</h3><p>فيديو إعلاني من أعمال NextAd AI.</p><span class="card-note">هنضيف الفيديو قريبًا</span></div></article>
+    <article class="card reveal"><div class="video-box"><button class="play" aria-label="تشغيل نموذج الإعلان 02" data-video="">▶</button></div><div class="details"><h3>نموذج إعلان 02</h3><p>فيديو إعلاني من أعمال NextAd AI.</p><span class="card-note">هنضيف الفيديو قريبًا</span></div></article>
+    <article class="card reveal"><div class="video-box"><button class="play" aria-label="تشغيل نموذج الإعلان 03" data-video="">▶</button></div><div class="details"><h3>نموذج إعلان 03</h3><p>فيديو إعلاني من أعمال NextAd AI.</p><span class="card-note">هنضيف الفيديو قريبًا</span></div></article>
+    <article class="card reveal"><div class="video-box"><button class="play" aria-label="تشغيل نموذج الإعلان 04" data-video="">▶</button></div><div class="details"><h3>نموذج إعلان 04</h3><p>فيديو إعلاني من أعمال NextAd AI.</p><span class="card-note">هنضيف الفيديو قريبًا</span></div></article>
+    <article class="card reveal"><div class="video-box"><button class="play" aria-label="تشغيل نموذج الإعلان 05" data-video="">▶</button></div><div class="details"><h3>نموذج إعلان 05</h3><p>فيديو إعلاني من أعمال NextAd AI.</p><span class="card-note">هنضيف الفيديو قريبًا</span></div></article>
+    <article class="card reveal"><div class="video-box"><button class="play" aria-label="تشغيل نموذج الإعلان 06" data-video="">▶</button></div><div class="details"><h3>نموذج إعلان 06</h3><p>فيديو إعلاني من أعمال NextAd AI.</p><span class="card-note">هنضيف الفيديو قريبًا</span></div></article>
   </div>
 </section>
-
-<section>
-  <div class="price">
-    <p>ابدأ إعلانك الجديد</p>
-    <strong>الأسعار تبدأ من 300 جنيه</strong>
-    <p>السعر النهائي حسب تفاصيل الإعلان ومدته.</p>
+<section id="services">
+  <div class="section-head reveal"><div><div class="kicker">WHAT WE CREATE</div><h2>خدماتنا</h2></div><p>محتوى بصري مصمم عشان يبرز مشروعك ويقدّم فكرتك بطريقة مميزة.</p></div>
+  <div class="services">
+    <article class="service reveal"><div class="service-icon">✦</div><h3>إعلانات المنتجات</h3><p>إعلانات سينمائية تبرز تفاصيل المنتج وتقدمه بشكل جذاب.</p></article>
+    <article class="service reveal"><div class="service-icon">🍽</div><h3>إعلانات المطاعم</h3><p>فيديوهات شهية للعروض والافتتاحات والمطاعم والكافيهات.</p></article>
+    <article class="service reveal"><div class="service-icon">▦</div><h3>إعلانات الشركات</h3><p>محتوى إعلاني للشركات والعيادات والمكاتب والخدمات.</p></article>
+    <article class="service reveal"><div class="service-icon">▶</div><h3>فيديوهات AI</h3><p>تحويل الأفكار إلى مشاهد إبداعية بالذكاء الاصطناعي.</p></article>
+    <article class="service reveal"><div class="service-icon">▣</div><h3>ريلز وسوشيال ميديا</h3><p>محتوى عمودي مناسب لمنصات التواصل الاجتماعي.</p></article>
+    <article class="service reveal"><div class="service-icon">✎</div><h3>تصميمات إعلانية</h3><p>تصميمات بصرية متناسقة مع هوية مشروعك.</p></article>
   </div>
 </section>
-
-<section>
-  <div class="contact">
-    <h2>عندك فكرة إعلان؟</h2>
-    <p>ابعتلنا تفاصيل منتجك أو خدمتك، وخلينا نحول فكرتك لإعلان مميز.</p>
-    <a class="btn" href="https://wa.me/201559265622?text=%D8%A3%D9%87%D9%84%D8%A7%20NextAdAI%D8%8C%20%D8%B9%D8%A7%D9%8A%D8%B2%20%D8%A3%D8%B9%D9%85%D9%84%20%D8%A5%D8%B9%D9%84%D8%A7%D9%86">تواصل على واتساب</a>
-    <a class="btn" href="https://www.facebook.com/NextAdAi/" target="_blank" rel="noopener">صفحتنا على فيسبوك</a>
-  </div>
-</section>
+<section id="pricing"><div class="price reveal"><div class="kicker">SIMPLE PRICING</div><h2>ابدأ إعلانك الجديد</h2><strong>الأسعار تبدأ من 300 جنيه</strong><p>السعر النهائي بيتحدد حسب فكرة الإعلان ومدته ومتطلبات التنفيذ.</p><a class="btn btn-primary" href="https://wa.me/201559265622?text=%D8%A3%D9%87%D9%84%D8%A7%20NextAdAI%D8%8C%20%D8%B9%D8%A7%D9%8A%D8%B2%20%D8%A3%D8%B3%D8%AA%D9%81%D8%B3%D8%B1%20%D8%B9%D9%86%20%D8%B3%D8%B9%D8%B1%20%D8%A5%D8%B9%D9%84%D8%A7%D9%86">اسأل عن السعر</a></div></section>
+<section id="contact"><div class="contact reveal"><div class="kicker">LET'S CREATE</div><h2>عندك فكرة إعلان؟</h2><p>ابعتلنا تفاصيل منتجك أو خدمتك، وخلينا نحول فكرتك لإعلان مميز.</p><div class="contact-actions"><a class="btn btn-primary" href="https://wa.me/201559265622?text=%D8%A3%D9%87%D9%84%D8%A7%20NextAdAI%D8%8C%20%D8%B9%D8%A7%D9%8A%D8%B2%20%D8%A3%D8%B9%D9%85%D9%84%20%D8%A5%D8%B9%D9%84%D8%A7%D9%86">تواصل على واتساب</a><a class="btn btn-outline" href="https://www.facebook.com/NextAdAi/" target="_blank" rel="noopener">صفحتنا على فيسبوك ↗</a></div></div></section>
 </main>
-
-<footer>
-  <div class="logo" style="font-size:28px">Next<span class="blue">Ad</span><span class="orange">AI</span></div>
-  <p>SMART ADS • BIGGER RESULTS</p>
-  © 2026 NextAdAI
-</footer>
+<footer><img src="assets/nextad-logo.png" alt="NextAd AI"><p>SMART ADS • BIGGER RESULTS</p><div>© 2026 NextAd AI — جميع الحقوق محفوظة</div></footer>
+<a class="floating-wa" href="https://wa.me/201559265622" aria-label="تواصل عبر واتساب">◉ واتساب</a>
+<script>
+const menuBtn=document.getElementById('menuBtn'),navLinks=document.getElementById('navLinks');
+menuBtn.addEventListener('click',()=>{const open=navLinks.classList.toggle('open');menuBtn.setAttribute('aria-expanded',String(open));menuBtn.textContent=open?'×':'☰'});
+navLinks.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{navLinks.classList.remove('open');menuBtn.setAttribute('aria-expanded','false');menuBtn.textContent='☰'}));
+const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('visible');observer.unobserve(entry.target)}}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+document.querySelectorAll('[data-video]').forEach(button=>button.addEventListener('click',()=>{const url=button.dataset.video;if(!url){alert('هنضيف رابط الفيديو هنا بعد ما تجهز روابط إعلاناتك.');return}const id=(url.match(/(?:youtu\\.be\\/|youtube\\.com\\/(?:watch\\?v=|embed\\/|shorts\\/))([\\w-]{11})/)||[])[1];if(!id){window.open(url,'_blank','noopener');return}const card=button.closest('.card');const frame=document.createElement('iframe');frame.src='https://www.youtube-nocookie.com/embed/'+id+'?autoplay=1';frame.title=card.querySelector('h3').textContent;frame.allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';frame.allowFullscreen=true;card.querySelector('.video-box').appendChild(frame);card.classList.add('is-playing')}));
+</script>
 </body>
 </html>
